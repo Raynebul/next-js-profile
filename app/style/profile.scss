@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.text-gradient-glossy {
+  background: linear-gradient(120deg,
+      rgba(238, 123, 140, 0.85),
+      rgba(114, 202, 232, 0.85),
+      rgba(223, 119, 223, 0.85),
+      rgba(230, 216, 96, 0.85));
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.avatar-background {
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  background: url('../../public/avatar-noise.webp'),
+    radial-gradient(circle at right center, #563277, #4a378c 30%, #4172c2 55%, #32517380);
+  inset: -40px -80px;
+  -webkit-mask-image: radial-gradient(ellipse at center,
+      black 5%,
+      transparent 70%);
+
+  mask-image: radial-gradient(ellipse at center,
+      black 5%,
+      transparent 70%);
+}
+
+.badge-background {
+  --badge-color: oklch(90.5% 0.182 98.111);
+
+  position: relative;
+  background: var(--badge-color);
+  transition: box-shadow .3s ease;
+  will-change: box-shadow;
+}
+
+.badge-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #2a2a2c;
+  box-shadow:
+    10px 10px 35px -14px color-mix(in oklch,
+      var(--badge-color),
+      transparent 40%);
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #181818 60%, rgba(24 24 24 / 0.8));
+}
+
+.manrope {
+  font-family: Manrope, sans-serif;
+  letter-spacing: -.88px;
+}
+
+.place {
+  font-family: Manrope, sans-serif;
+  letter-spacing: -.88px;
+  text-shadow: 0 0 4px rgba(255, 255, 255, .1), 0 0 14px rgba(130, 168, 236, .2);
+}
+
+.name {
+  font-family: Manrope, sans-serif;
+  font-size: 40px;
+  letter-spacing: -.88px;
+  background: radial-gradient(circle 200px at 30% -180%, #347efe 25%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 130%;
+  text-shadow: 0 0 4px rgba(255, 255, 255, .1), 0 0 14px rgba(130, 168, 236, .2);
+}
+
+.avatar {
+  position: relative;
+}
+
+.custom-text-shadow {
+  background: radial-gradient(circle 120px at 30% -180%, #34d2fe 22%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 4px rgba(255, 255, 255, .1), 0 0 14px rgba(130, 168, 236, .2)
+}
+
+.avatar::before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(180deg, #17a7e9, #0000);
+  z-index: -1;
+  filter: blur(30px);
+}
+
+.avatar::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(270deg, #7a23a1, #715ebde6 60% 80%, #bd34fe00);
+  z-index: -1;
+  filter: blur(30px);
+}
