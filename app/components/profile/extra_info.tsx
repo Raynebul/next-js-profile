@@ -93,7 +93,7 @@ export default function ExtraInfo() {
         <div className="manrope text-white font-semibold text-2xl custom-text-shadow">
           TECH STACK
         </div>
-        <img src="/links.svg" alt="Links" width={35} height={35} />
+        <Image src="links.svg" alt="Links" width={35} height={35} />
       </div>
       <div>
         <Stack />
