@@ -93,13 +93,7 @@ export default function ExtraInfo() {
         <div className="manrope text-white font-semibold text-2xl custom-text-shadow">
           TECH STACK
         </div>
-        <Image
-          src="/links.svg"
-          alt="Next.js logo"
-          width={35}
-          height={35}
-          priority
-        />
+        <img src="/links.svg" alt="Links" width={35} height={35} />
       </div>
       <div>
         <Stack />
