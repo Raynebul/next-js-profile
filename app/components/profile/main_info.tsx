@@ -7,7 +7,7 @@ export default function MainInfo() {
       <div className="flex flex-col items-center gap-4 text-center">
         <div className="avatar border-8 border-[#002956] border-l-transparent border-t-transparent rounded-full !z-50">
           <Image
-            className="shadow-xl shadow-white/30 border-8 border-[#002956] border-r-transparent border-b-transparent rounded-full"
+            className="shadow-xl glow-avatar border-8 border-[#002956] border-r-transparent border-b-transparent rounded-full"
             src="/profile-photo.jpg"
             alt="Next.js logo"
             width={100}

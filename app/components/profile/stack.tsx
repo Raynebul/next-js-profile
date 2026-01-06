@@ -102,12 +102,12 @@ const Stack = () => {
         <div
           key={key}
           style={{ "--badge-color": item.color } as React.CSSProperties}
-          className={`cursor-pointer relative flex gap-1 items-center px-4 py-2 rounded-xl !z-50 badge-background`}
+          className={`relative flex gap-1 items-center px-4 py-2 rounded-xl !z-50 badge-background`}
         >
           {item?.icon && (
             <div className={`z-40 text-xl ${item.className}`}>{item.icon}</div>
           )}
-          <span className={`z-40 opacity-50  ${item.className}`}>
+          <span className={`ibm-plex-mono z-40 opacity-50  ${item.className}`}>
             {item.label}
           </span>
         </div>

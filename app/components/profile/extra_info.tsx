@@ -21,15 +21,15 @@ export default function ExtraInfo() {
       list: [
         {
           icon: <BiLogoVuejs />,
-          title: "Frontend Developer",
+          title: "Frontend_Developer",
         },
         {
           icon: <BsTreeFill />,
-          title: "Siberian Russian Guy",
+          title: "Siberian_Russian_Guy",
         },
         {
           icon: <GiGamepad />,
-          title: "Also Gamer",
+          title: "Also_Gamer",
         },
       ],
     },
@@ -39,7 +39,7 @@ export default function ExtraInfo() {
         {
           icon: <BsTelegram />,
           title: "Telegram",
-          link: "",
+          link: "https://t.me/Raynebul",
         },
         {
           icon: <BsGithub />,
@@ -61,20 +61,37 @@ export default function ExtraInfo() {
             {item?.list &&
               item.list.map((paragraph, index) => (
                 <div
-                  className="flex gap-2 items-center text-slate-500 text-xl text-shadow-md"
+                className={
+                    `flex gap-2 items-center text-slate-500 text-xl text-shadow-md ` +
+                    (paragraph?.link
+                      ? `transition-all duration-300 ease-out hover:py-1 hover:bg-gradient-to-r hover:from-[#17a7e9] hover:to-[#715ebde6] hover:text-transparent hover:!bg-clip-text hover:scale-110`
+                      : ""
+                    )
+                  }
                   key={index}
                 >
                   {paragraph?.icon && <div>{paragraph.icon}</div>}
-                  <span>{paragraph.title}</span>
+                  {paragraph?.link ? (
+                    <a
+                      href={paragraph.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ibm-plex-mono"
+                    >
+                      {paragraph.title}
+                    </a>
+                  ) : (
+                    <span className="ibm-plex-mono">{paragraph.title}</span>
+                  )}
                 </div>
               ))}
           </div>
         </div>
       ))}
       <hr className="h-px border-0 bg-gradient-to-r from-[#17a7e9] via-[#715ebde6]/33 to-transparent" />
-      <div className="cursor-pointer flex gap-2 items-center">
+      <div className="flex gap-2 items-center">
         <div className="manrope text-white font-semibold text-2xl custom-text-shadow">
-          STACK
+          TECH STACK
         </div>
         <Image
           src="/links.svg"
